@@ -8,22 +8,40 @@ Due to some CVQ commands for vDPA are missing at present, this project aims to a
 
 What's more, I also fixed some bugs and implemented performance improvements as part of this project.
 
-## Patches sent
+## Patches
 
 ### QEMU
 
-- [x] [vhost: fix possible wrap in SVQ descriptor ring](https://lore.kernel.org/all/20230509084817.3973-1-yin31149@gmail.com/)
-- [x] [Vhost-vdpa Shadow Virtqueue Offloads support](https://lore.kernel.org/all/cover.1685704856.git.yin31149@gmail.com/)
-- [x] [vdpa: Refactor vdpa_feature_bits array](https://lore.kernel.org/all/cover.1688130570.git.yin31149@gmail.com/)
-- [x] [vdpa: Return -EIO if device ack is VIRTIO_NET_ERR](https://lore.kernel.org/all/cover.1688438055.git.yin31149@gmail.com/)
-- [x] [vdpa: Fix possible use-after-free for VirtQueueElement](https://lore.kernel.org/all/cover.1688746840.git.yin31149@gmail.com/)
-- [x] [Vhost-vdpa Shadow Virtqueue _F_CTRL_RX commands support](https://lore.kernel.org/all/cover.1688743107.git.yin31149@gmail.com/)
-- [x] [Vhost-vdpa Shadow Virtqueue _F_CTRL_RX_EXTRA commands support](https://lore.kernel.org/all/cover.1688797728.git.yin31149@gmail.com/)
-- [ ] [Vhost-vdpa Shadow Virtqueue VLAN support](https://lore.kernel.org/all/cover.1690106284.git.yin31149@gmail.com/)
-- [ ] [vdpa: Send all CVQ state load commands in parallel](https://lore.kernel.org/all/cover.1689748694.git.yin31149@gmail.com/)
-- [ ] [Vhost-vdpa Shadow Virtqueue Hash calculation Support](https://lore.kernel.org/all/cover.1691762906.git.yin31149@gmail.com/)
-- [ ] [Vhost-vdpa Shadow Virtqueue RSS Support](https://lore.kernel.org/all/cover.1691766252.git.yin31149@gmail.com/)
+#### New Features
+
+| Status | Link |
+| :-: | :-: |
+| Merged | [Vhost-vdpa Shadow Virtqueue Offloads support](https://lore.kernel.org/all/cover.1685704856.git.yin31149@gmail.com/) |
+| Merged | [Vhost-vdpa Shadow Virtqueue _F_CTRL_RX commands support](https://lore.kernel.org/all/cover.1688743107.git.yin31149@gmail.com/) |
+| Merged | [Vhost-vdpa Shadow Virtqueue _F_CTRL_RX_EXTRA commands support](https://lore.kernel.org/all/cover.1688797728.git.yin31149@gmail.com/) |
+| Pending | [Vhost-vdpa Shadow Virtqueue VLAN support](https://lore.kernel.org/all/cover.1690106284.git.yin31149@gmail.com/) |
+| Pending | [Vhost-vdpa Shadow Virtqueue Hash calculation Support](https://lore.kernel.org/all/cover.1691762906.git.yin31149@gmail.com/) |
+| Pending | [Vhost-vdpa Shadow Virtqueue RSS Support](https://lore.kernel.org/all/cover.1691766252.git.yin31149@gmail.com/) |
+
+#### Performance Improvements
+
+| Status | Link |
+| :-: | :-: |
+| Pending | [vdpa: Send all CVQ state load commands in parallel](https://lore.kernel.org/all/cover.1689748694.git.yin31149@gmail.com/) |
+
+#### Bug Fixes
+
+| Status | Link |
+| :-: | :-: |
+| Merged | [vhost: fix possible wrap in SVQ descriptor ring](https://lore.kernel.org/all/20230509084817.3973-1-yin31149@gmail.com/) |
+| Merged | [vdpa: Return -EIO if device ack is VIRTIO_NET_ERR](https://lore.kernel.org/all/cover.1688438055.git.yin31149@gmail.com/) |
+| Merged | [vdpa: Fix possible use-after-free for VirtQueueElement](https://lore.kernel.org/all/cover.1688746840.git.yin31149@gmail.com/) |
+| Merged | [vdpa: Refactor vdpa_feature_bits array](https://lore.kernel.org/all/cover.1688130570.git.yin31149@gmail.com/) |
 
 ### Kernel
 
-- [ ] [virtio-net: Zero max_tx_vq field for VIRTIO_NET_CTRL_MQ_HASH_CONFIG case](https://lore.kernel.org/all/20230810110405.25558-1-yin31149@gmail.com/)
+#### Bug Fixes
+
+| Status | Link |
+| :-: | :-: |
+| Pending | [virtio-net: Zero max_tx_vq field for VIRTIO_NET_CTRL_MQ_HASH_CONFIG case](https://lore.kernel.org/all/20230810110405.25558-1-yin31149@gmail.com/) |
