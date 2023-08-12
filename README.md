@@ -23,3 +23,7 @@ What's more, I also fixed some bugs and implemented performance improvements as 
 - [ ] [vdpa: Send all CVQ state load commands in parallel](https://lore.kernel.org/all/cover.1689748694.git.yin31149@gmail.com/)
 - [ ] [Vhost-vdpa Shadow Virtqueue Hash calculation Support](https://lore.kernel.org/all/cover.1691762906.git.yin31149@gmail.com/)
 - [ ] [Vhost-vdpa Shadow Virtqueue RSS Support](https://lore.kernel.org/all/cover.1691766252.git.yin31149@gmail.com/)
+
+### Kernel
+
+- [ ][virtio-net: Zero max_tx_vq field for VIRTIO_NET_CTRL_MQ_HASH_CONFIG case](https://lore.kernel.org/all/20230810110405.25558-1-yin31149@gmail.com/)
