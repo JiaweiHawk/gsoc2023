@@ -51,3 +51,11 @@ What's more, I also fixed some bugs and implemented performance improvements as 
 | Status | Link |
 | :-: | :-: |
 | <img src="https://img.shields.io/badge/Merged-4EAA25" /> | [virtio-net: Zero max_tx_vq field for VIRTIO_NET_CTRL_MQ_HASH_CONFIG case](https://lore.kernel.org/all/20230810110405.25558-1-yin31149@gmail.com/) |
+
+## Summary
+
+I am incredibly thankful to my mentor, Eugenio, whose unwavering support helped me a lot during this project. Throughout my internship, his guidance has been invaluable, providing clarity to my inquiries and deepening my understanding through insightful discussions on pertinent subjects. Thanks to Eugenio's mentorship, I was able to quickly get up to speed on this project and ultimatly complete it successfully.
+
+Furthermore, I would like to extend my heartfelt appreciation to the diligent QEMU community developers, whose constructive feedback greatly enhanced the quality of my patches. Their generous contributions have significantly contributed to the refinement of my work.
+
+Over the course of this internship, I had the opportunity to learn the knowledge about the vDPA framework and gained profound insights into the process of state changing within QEMU's vhost-vdpa backend. It brings me immense joy to successfully implement the state restore feature for QEMU's vhost-vdpa device. This experience has been exceptionally enriching and has undoubtedly broadened my horizons!
