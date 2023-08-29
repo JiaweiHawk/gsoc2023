@@ -52,6 +52,19 @@ What's more, I also fixed some bugs and implemented performance improvements as 
 | :-: | :-: |
 | <img src="https://img.shields.io/badge/Merged-4EAA25" /> | [virtio-net: Zero max_tx_vq field for VIRTIO_NET_CTRL_MQ_HASH_CONFIG case](https://lore.kernel.org/all/20230810110405.25558-1-yin31149@gmail.com/) |
 
+## Usage
+
+### Apply the patches
+
+1. clone the QEMU from gitlab by `git clone git@gitlab.com:qemu-project/qemu.git`
+2. checkout to the commit d669b7bba22d45cb9e5926d63541e52bde1655dd by `git checkout -b d669b7bba22d45cb9e5926d63541e52bde1655dd`
+3. download all `pending` patches according to the link above
+4. apply patches in the order of dependencies by `git am XX.patch`
+
+### Build the Qemu
+
+### Run the Qemu
+
 ## Summary
 
 I am incredibly thankful to my mentor, Eugenio, whose unwavering support helped me a lot during this project. Throughout my internship, his guidance has been invaluable, providing clarity to my inquiries and deepening my understanding through insightful discussions on pertinent subjects. Thanks to Eugenio's mentorship, I was able to quickly get up to speed on this project and ultimatly complete it successfully.
