@@ -63,7 +63,9 @@ What's more, I also fixed some bugs and implemented performance improvements as 
 
 ### Build the Qemu
 
-TODO
+1. install libbpf dependency by `sudo apt install libbpf-dev` in Ubuntu
+2. configure the Qemu with `bpf` and `vhost-vdpa` features enabled by `/path/to/qemu/configure --enable-bpf --enable-vhost-vdpa`
+3. compile the Qemu by `make -j $(nproc)`
 
 ### Run the guest
 
