@@ -58,7 +58,7 @@ What's more, I also fixed some bugs and implemented performance improvements as 
 
 1. clone the QEMU from gitlab by `git clone git@gitlab.com:qemu-project/qemu.git`
 2. checkout to the commit d669b7bba22d45cb9e5926d63541e52bde1655dd by `git checkout -b d669b7bba22d45cb9e5926d63541e52bde1655dd`
-3. download all `pending` patches according to the link above
+3. download all **pending** patches according to the link above
 4. apply patches in the order of dependencies by `git am XX.patch`
 
 ### Build the Qemu
