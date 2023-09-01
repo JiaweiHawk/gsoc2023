@@ -69,7 +69,27 @@ What's more, I also fixed some bugs and implemented performance improvements as 
 
 ### Run the guest
 
-TODO
+The following table presents the **state recovery** implemented by the patch series, along with the **options** required for enabling them during Qemu startup and the corresponding **bash commands** to set them within the guest.
+
+| State | VirtIO standard | options required for Qemu | commands used in guest |
+| :-: | :-: | :-: | :-: |
+| offload | [Offloads State Configuration](https://docs.oasis-open.org/virtio/virtio/v1.2/csd01/virtio-v1.2-csd01.html#x1-2690008) | ctrl_guest_offloads=on/off</br>guest_csum=on/off</br>guest_tso4=on/off</br>guest_tso6=on/off</br>guest_ecn=on/off</br>guest_ufo=on/off | |
+| MAC Address Filtering | [Setting MAC Address Filtering](https://docs.oasis-open.org/virtio/virtio/v1.2/csd01/virtio-v1.2-csd01.html#x1-2500002) | ctrl_rx=on/off | `ip link add ${MAC_VLAN_NAME} link eth0 address ${MAC_ADDRESS} type macvlan mode bridge` |
+| Packet Receive Filtering | [Packet Receive Filtering](https://docs.oasis-open.org/virtio/virtio/v1.2/csd01/virtio-v1.2-csd01.html#x1-2470001) | ctrl_rx=on/off</br>ctrl_rx_extra=on/off | `ip link set eth0 promisc on/ff`</br>`ip link set eth0 allmulticast on/off` |
+| vlan | [VLAN Filtering](https://docs.oasis-open.org/virtio/virtio/v1.2/csd01/virtio-v1.2-csd01.html#x1-2540003) | ctrl_vlan=on/off | `ip link add link eth0 name ${vlan_name} type vlan id ${vlan_id}` |
+| hash calculation | [Hash calculation](https://docs.oasis-open.org/virtio/virtio/v1.2/csd01/virtio-v1.2-csd01.html#x1-2640004) | hash=on/off | `ethtool -K eth0 rxhash on/off` |
+| rss | [Receive-side scaling](https://docs.oasis-open.org/virtio/virtio/v1.2/csd01/virtio-v1.2-csd01.html#x1-2650007) | rss=on/off | `ethtool -K eth0 rxhash on/off` |
+
+Use should do as the following instructions:
+1. boot the source and destination Qemu with **the same device configuration** with **the wanted state** mentioned above to be supported by
+```bash
+/path/to/qemu \
+    -netdev -netdev type=vhost-vdpa,id=${name},vhostdev=/path/to/vdpa-device,x-svq=true \
+    -device virtio-net-pci,netdev=${name},mq=on,ctrl_vq=on,guest_tso4=on,guest_tso6=on,guest_ecn=on,guest_ufo=on,guest_announce=off,${options-required-for-Qemu} \
+    ...
+```
+2. config the state in guest in source  by execute `${commands-used-in-guest}`
+3. execute the **live-migration** in source destination, the device state will **be restored** in the destination Qemu
 
 ## Summary
 
