@@ -33,7 +33,7 @@ What's more, I also fixed some bugs and implemented performance improvements as 
 
 | Status | Link |
 | :-: | :-: |
-| <img src="https://img.shields.io/badge/Pending-00A8E1" />  | [vdpa: Send all CVQ state load commands in parallel](https://lore.kernel.org/all/cover.1693287885.git.yin31149@gmail.com/) |
+| <img src="https://img.shields.io/badge/Pending-00A8E1" />  | [vdpa: Send all CVQ state load commands in parallel](https://lore.kernel.org/all/cover.1697165821.git.yin31149@gmail.com/) |
 
 #### Bug Fixes
 
