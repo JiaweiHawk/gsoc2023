@@ -57,8 +57,6 @@ What's more, I also fixed some bugs and implemented performance improvements as 
 ### Download source code
 
 1. clone the submodules by `git submodule init`
-3. download all **pending** patches according to the link above
-4. apply patches in the order of dependencies by `git am XX.patch`
 
 ### Build the Qemu
 
