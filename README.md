@@ -26,7 +26,7 @@ What's more, I also fixed some bugs and implemented performance improvements as 
 | <img src="https://img.shields.io/badge/Merged-4EAA25" /> | [Vhost-vdpa Shadow Virtqueue _F_CTRL_RX commands support](https://lore.kernel.org/all/cover.1688743107.git.yin31149@gmail.com/) |
 | <img src="https://img.shields.io/badge/Merged-4EAA25" /> | [Vhost-vdpa Shadow Virtqueue _F_CTRL_RX_EXTRA commands support](https://lore.kernel.org/all/cover.1688797728.git.yin31149@gmail.com/) |
 | <img src="https://img.shields.io/badge/Merged-4EAA25" /> | [Vhost-vdpa Shadow Virtqueue VLAN support](https://lore.kernel.org/all/cover.1690106284.git.yin31149@gmail.com/) |
-| <img src="https://img.shields.io/badge/Pending-00A8E1" />  | [Vhost-vdpa Shadow Virtqueue Hash calculation Support](https://lore.kernel.org/all/cover.1698194366.git.yin31149@gmail.com/) |
+| <img src="https://img.shields.io/badge/Merged-4EAA25" />  | [Vhost-vdpa Shadow Virtqueue Hash calculation Support](https://lore.kernel.org/all/cover.1698194366.git.yin31149@gmail.com/) |
 | <img src="https://img.shields.io/badge/Pending-00A8E1" />  | [Vhost-vdpa Shadow Virtqueue RSS Support](https://lore.kernel.org/all/cover.1698195059.git.yin31149@gmail.com/) |
 
 #### Performance Improvements
